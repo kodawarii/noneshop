@@ -14,12 +14,13 @@ class Nav extends Component {
             <Link to={'/'}><li> Welcome </li></Link>
             <Link to={'/collections'}><li> Collections </li></Link>
             <Link to={'/connect'}><li> Connect </li></Link>
+            <li><input className="searchbar" type="text" placeholder="Search"/></li>
           </ul>
         </HashRouter>
 
         <ul className="Login-ul">
-          <li> <span className="login">Login </span> </li>
-          <li> <span className="register">Register</span> </li>
+          <li><span className="login">Login </span></li>
+          <li><span className="register">Register</span></li>
         </ul>
       </div>
     );

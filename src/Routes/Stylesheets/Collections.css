@@ -1,0 +1,31 @@
+.Collections{
+  margin: 4%;
+  color: #848484;
+}
+
+.Collections-Header{
+  color: #4f4f4f;
+}
+
+.outer-wrapper{
+  display: inline-block;
+  margin: 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 16vw 16vw 16vw 16vw;
+  grid-gap: 64px;
+  text-align: left;
+  animation: loadAnimation ease-in-out 1s;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 28vh;
+  width: 16vw;
+  border: 1px solid #e1e1e1;
+}

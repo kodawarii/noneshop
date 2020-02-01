@@ -5,6 +5,7 @@ import './App.css';
 
 import Header from './Components/Header.Component.js';
 import Nav from './Components/Nav.Component.js';
+import Footer from './Components/Footer.Component.js';
 
 import Welcome from './Routes/Welcome.Route';
 import Collections from './Routes/Collections.Route';
@@ -27,6 +28,8 @@ class App extends Component {
               <Route exact path='/connect' component={Connect}/>
             </Switch>
           </div>
+          
+          <Footer></Footer>
         </HashRouter>
       </div>
     );
