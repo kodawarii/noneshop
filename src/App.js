@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { HashRouter, Switch, Route} from 'react-router-dom';
+
 import './App.css';
+
+import Header from './Components/Header.Component.js';
+import Nav from './Components/Nav.Component.js';
+
+import Welcome from './Routes/Welcome.Route';
+import Collections from './Routes/Collections.Route';
+import Connect from './Routes/Connect.Route';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Copy instagram and other designer websites - that really simplistic, elegant style e.g. hermes, balenciaga etc.</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <HashRouter>
+          <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap" rel="stylesheet"/>
+          <Header></Header>
+          <Nav></Nav>
+
+          <div className="Content">
+            <Switch>
+              <Route exact path='/' component = {Welcome}/>
+              <Route exact path='/collections' component={Collections}/>
+              <Route exact path='/connect' component={Connect}/>
+            </Switch>
+          </div>
+        </HashRouter>
       </div>
     );
   }

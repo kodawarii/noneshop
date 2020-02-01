@@ -1,0 +1,53 @@
+.Nav{
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 0 16px 0;
+}
+
+.Nav a{
+  color: #7f7f7f;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+
+.Nav a:hover{
+  color: #a5a5a5;
+  text-decoration: none;
+  animation: anim-linkhover ease-in-out 0.2s;
+}
+
+.Nav-ul{
+  padding: 12px 0 12px 0;
+  list-style: none;
+}
+
+.Nav-ul li{
+  display: inline;
+  padding: 0 50px 0 50px;
+}
+
+.Login-ul{
+  color: #7f7f7f;
+  list-style: none;
+}
+
+.Login-ul li{
+  display: inline;
+  padding: 0 50px 0 50px;
+}
+
+.register{
+  padding: 8px;
+  border: 1px solid #d2d2d2;
+}
+
+@keyframes anim-linkhover {
+  0%{
+    color: #7f7f7f;
+  }
+  100%{
+    color: #a5a5a5;
+  }
+}
