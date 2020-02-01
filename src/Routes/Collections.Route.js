@@ -5,11 +5,6 @@ import './Stylesheets/RoutesShared.css';
 import ItemHover from '../MicroComponents/ItemHover.Component';
 
 class Collections extends Component {
-
-  addToCart(){
-    console.log("adding...");
-  }
-
   render() {
     return (
       <div className="Collections RoutesShared">
@@ -18,35 +13,35 @@ class Collections extends Component {
           <div className="wrapper">
             <div className="box a">
               Product 1
-              <ItemHover addToCart={this.addToCart.bind(this)} />
+              <ItemHover addToCart={this.props.addToCart} id={"id1"}/>
             </div>
             <div className="box b">
               Product 2
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id2"}/>
             </div>
             <div className="box c">
               Product 3
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id3"}/>
             </div>
             <div className="box d">
               Product 4
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id4"}/>
             </div>
             <div className="box e">
               Product 5
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id5"}/>
             </div>
             <div className="box f">
               Product 6
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id6"}/>
             </div>
             <div className="box g">
               Product 7
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id7"}/>
             </div>
             <div className="box h">
               Product 8
-              <ItemHover/>
+              <ItemHover addToCart={this.props.addToCart} id={"id8"}/>
             </div>
           </div>
         </div>

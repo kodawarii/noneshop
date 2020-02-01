@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { HashRouter, Switch, Route} from 'react-router-dom';
+import { HashRouter} from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import './Stylesheets/Nav.css';
@@ -21,7 +21,7 @@ class Nav extends Component {
         <ul className="Login-ul">
           <li><span className="login">Login </span></li>
           <li><span className="register">Register</span></li>
-          <li><span className="cart">Cart (0)</span></li>
+          <li><span className="cart">Cart ({this.props.cart.length})</span></li>
         </ul>
       </div>
     );
