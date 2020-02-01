@@ -12,36 +12,36 @@ class Collections extends Component {
         <div className="outer-wrapper">
           <div className="wrapper">
             <div className="box a">
-              Product 1
-              <ItemHover addToCart={this.props.addToCart} id={"id1"}/>
+              {this.props.cart[0]}
+              <ItemHover addToCart={this.props.addToCart} id={"0"}/>
             </div>
             <div className="box b">
               Product 2
-              <ItemHover addToCart={this.props.addToCart} id={"id2"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"1"}/>
             </div>
             <div className="box c">
               Product 3
-              <ItemHover addToCart={this.props.addToCart} id={"id3"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"2"}/>
             </div>
             <div className="box d">
               Product 4
-              <ItemHover addToCart={this.props.addToCart} id={"id4"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"3"}/>
             </div>
             <div className="box e">
               Product 5
-              <ItemHover addToCart={this.props.addToCart} id={"id5"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"4"}/>
             </div>
             <div className="box f">
               Product 6
-              <ItemHover addToCart={this.props.addToCart} id={"id6"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"5"}/>
             </div>
             <div className="box g">
               Product 7
-              <ItemHover addToCart={this.props.addToCart} id={"id7"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"6"}/>
             </div>
             <div className="box h">
               Product 8
-              <ItemHover addToCart={this.props.addToCart} id={"id8"}/>
+              <ItemHover addToCart={this.props.addToCart} id={"7"}/>
             </div>
           </div>
         </div>

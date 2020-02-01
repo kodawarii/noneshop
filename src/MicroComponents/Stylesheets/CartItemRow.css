@@ -1,0 +1,30 @@
+td{
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+.X-btn{
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.quant-figure{
+  padding: 0 12px 0 12px;
+}
+
+.quant-common{
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid grey;
+  border-radius: 200px;
+}
+
+.quant-miuns{
+
+}
+
+.quant-add{
+
+}

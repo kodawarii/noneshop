@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <div className="App-header">
-        <h2>nonedesign©</h2>
+        <h2> __ n o n e d e s i g n ©</h2>
       </div>
     );
   }

@@ -21,7 +21,7 @@ class Nav extends Component {
         <ul className="Login-ul">
           <li><span className="login">Login </span></li>
           <li><span className="register">Register</span></li>
-          <Link to={'/cart'}><li><span className="cart">Cart ({this.props.cart.length})</span></li></Link>
+          <Link to={'/cart'}><li><span className="cart">Cart ({this.props.count})</span></li></Link>
         </ul>
       </div>
     );
