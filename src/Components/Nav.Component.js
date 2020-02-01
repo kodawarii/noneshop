@@ -21,6 +21,7 @@ class Nav extends Component {
         <ul className="Login-ul">
           <li><span className="login">Login </span></li>
           <li><span className="register">Register</span></li>
+          <li><span className="cart">Cart (0)</span></li>
         </ul>
       </div>
     );

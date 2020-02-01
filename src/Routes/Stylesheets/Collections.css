@@ -17,13 +17,10 @@
   grid-template-columns: 16vw 16vw 16vw 16vw;
   grid-gap: 64px;
   text-align: left;
-  animation: loadAnimation ease-in-out 1s;
 }
 
 .box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 
   height: 28vh;
   width: 16vw;

@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 
 import './Stylesheets/Collections.css';
 import './Stylesheets/RoutesShared.css';
+import ItemHover from '../MicroComponents/ItemHover.Component';
 
 class Collections extends Component {
+
+  addToCart(){
+    console.log("adding...");
+  }
+
   render() {
     return (
       <div className="Collections RoutesShared">
@@ -11,28 +17,36 @@ class Collections extends Component {
         <div className="outer-wrapper">
           <div className="wrapper">
             <div className="box a">
-              Content
+              Product 1
+              <ItemHover addToCart={this.addToCart.bind(this)} />
             </div>
             <div className="box b">
-              Content
+              Product 2
+              <ItemHover/>
             </div>
             <div className="box c">
-              Content
+              Product 3
+              <ItemHover/>
             </div>
             <div className="box d">
-              Content
+              Product 4
+              <ItemHover/>
             </div>
             <div className="box e">
-              Content
+              Product 5
+              <ItemHover/>
             </div>
             <div className="box f">
-              Content
+              Product 6
+              <ItemHover/>
             </div>
             <div className="box g">
-              Content
+              Product 7
+              <ItemHover/>
             </div>
             <div className="box h">
-              Content
+              Product 8
+              <ItemHover/>
             </div>
           </div>
         </div>
