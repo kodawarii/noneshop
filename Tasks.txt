@@ -1,0 +1,6 @@
+- Create practice backend ASP.NET backend (tutorial)
+- Create real backend ASP.NET backend (development) - CRUD functions
+- Implement authentication
+- Make Mobile app
+- Research how to create icon on android homepage from chrome
+- 
