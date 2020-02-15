@@ -1,6 +1,7 @@
-- Create practice backend ASP.NET backend (tutorial)
-- Create real backend ASP.NET backend (development) - CRUD functions
-- Implement authentication
+- Create practice backend ASP.NET backend (tutorial) [DONE]
+- Create real backend ASP.NET backend (development) - CRUD functions [DONE]
+- Create Practice Authentication App using ASP.NET Core [in-progress]
+- Implement authentication [in-progress]
 - Make Mobile app
-- Research how to create icon on android homepage from chrome
-- 
+- Research how to create icon on android homepage shortcut from chrome
+- Deploy app to Azure (or AWS - or another project)

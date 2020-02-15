@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Switch, Route} from 'react-router-dom';
+import axios from 'axios';
 
 import './App.css';
 
@@ -23,44 +24,38 @@ class App extends Component {
     this.state={
       itemCounter: 0,
       totalPrice: 0,
-      cart: [] // mock backend API DB
+      cart2:[]
     }
   }
 
   componentDidMount(){
-    // Setting up dummy data
-
-    // [id, img, descripton, quantity, price]
-    let products = [
-      ["0", "", "Eunbal t-shirt", 0, 800],
-      ["1", "", "NONE t-shirt", 0, 500],
-      ["2", "", "None hoodie", 0, 950],
-      ["3", "", "None belt", 0, 200],
-      ["4", "", "none t-shirt", 0, 1200],
-      ["5", "", "noneDesign t-shirt", 0, 400],
-      ["6", "", "ND t-shirt", 0, 350],
-      ["7", "", "ENON t-shirt", 0, 799]
-    ];
-
-    this.setState({cart: products});
+    // Retrieve NoneShop Products from api server
+    axios.get('http://localhost:52624/api/NoneApparels')
+        .then(response => {
+          this.setState({ cart2: response.data }); // [id, img, name, price]
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
   }
 
   addToCart(id){
-    // updating items in cart-dummy-data tracker
-    let toUpdate = this.state.cart[id];
-    toUpdate[3]++;
+    let toUpdate = this.state.cart2[id];
+    if(toUpdate.quantity === undefined) toUpdate.quantity = 1; // risky when we want .quantity to be undefined on purpose
+    else{
+      toUpdate.quantity++;
+    }
 
-    let current = this.state.cart;
+    let current = this.state.cart2;
     current[id] = toUpdate;
 
     // updating total prices
     let currPrice = this.state.totalPrice;
-    currPrice += this.state.cart[id][4];
+    currPrice += this.state.cart2[id].price;
     this.setState({totalPrice: currPrice});
 
     this.state.itemCounter++;
-    this.setState({cart: current});
-    console.log("> sucessfully added item to cart ... id: " + id);
+    this.setState({cart2: current});
   }
 
   render() {
@@ -70,18 +65,22 @@ class App extends Component {
           <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap" rel="stylesheet"/>
           <Header></Header>
-          <Nav cart={this.state.cart} count={this.state.itemCounter}></Nav>
+          <Nav cart={this.state.cart2} count={this.state.itemCounter}></Nav>
 
           <div className="Content">
             <Switch>
               <Route exact path='/' component={() => <Welcome thisIsNotEfficient="so dont use inline functions" />}/>
               <Route exact path='/collections' render={(props) => <Collections {...props} 
               addToCart={this.addToCart.bind(this) } 
-              cart={this.state.cart} 
+              cart2={this.state.cart2}
               count={this.state.itemCounter}
               />}/>
               <Route exact path='/connect' component={Connect} />
-              <Route exact path='/cart' render={(props) => <Cart {...props} cart={this.state.cart} count={this.state.itemCounter} totalPrice={this.state.totalPrice}/>}/>
+              <Route exact path='/cart' render={(props) => 
+                <Cart {...props} 
+                cart2={this.state.cart2}
+                count={this.state.itemCounter} 
+                totalPrice={this.state.totalPrice}/>}/>
             </Switch>
           </div>
           
